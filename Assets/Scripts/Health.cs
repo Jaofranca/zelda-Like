@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int hp = 1;
     int maxHP;
-    bool isDead = false;
+
     Animator animator;
 
     // Start is called before the first frame update
@@ -24,7 +24,6 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        isDead = true;
         animator.SetBool("smash", true);
         StartCoroutine(breakCo());
     }
