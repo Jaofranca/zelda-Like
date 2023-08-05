@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
     void Die()
     {
         isDead = true;
-        animator.SetBool("dead", true);
+        animator.SetBool("smash", true);
         StartCoroutine(breakCo());
     }
 
