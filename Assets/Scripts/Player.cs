@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator AttackCo()
     {
+        //speed += 5;
         animator.SetBool("attacking", true);
         currentState = PlayerState.attack;
         yield return null;
