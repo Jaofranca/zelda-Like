@@ -12,7 +12,7 @@ public class Knockback : MonoBehaviour
         if (other.gameObject.CompareTag("enemy"))
         {
             Rigidbody2D enemy = other.GetComponent<Rigidbody2D>();
-            thrust = GetComponent<Player>().speed * thrust;
+            //thrust = GetComponent<Player>().speed * thrust;
 
             if(enemy != null)
             {

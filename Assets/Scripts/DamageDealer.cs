@@ -9,7 +9,7 @@ public class DamageDealer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("breakable"))
+        if (collision.CompareTag("enemy"))
         {
             objectHealthScript = collision.gameObject.GetComponent<Health>();
             objectHealthScript.TakeDamage(damageStrength);
