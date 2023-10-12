@@ -1,5 +1,5 @@
 # Zelda-Like
-
+Jogo baseado em zelda, com pegadas de roguelikes como binding of isaac
 ## Roadmap
 ### Agosto
 - Protagonista
