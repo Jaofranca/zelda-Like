@@ -1,0 +1,81 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "sem título2.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "Todos os Ficheiros (*)",
+    "fileStates": {
+        "": {
+            "scaleInDock": 3,
+            "scaleInEditor": 5.5
+        },
+        "#0x72_16x16DungeonTileset.v5": {
+            "scaleInDock": 2
+        },
+        "#dungeon_tiles": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "D:/WS/CG/zelda-Like/Assets/SuperTiled2Unity/sem título2.tmx": {
+            "scale": 3.33984375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 191.32631578947368,
+                "y": 88.0280701754386
+            }
+        },
+        "D:/WS/CG/zelda-Like/Assets/SuperTiled2Unity/sem título2.tmx#Dungeon_Tileset": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 529,
+                "y": 289
+            }
+        },
+        "sem título.tmx#0x72_16x16DungeonTileset.v5": {
+            "scaleInDock": 1
+        },
+        "sem título.tmx#dungeon_tiles": {
+            "scaleInDock": 5.5
+        },
+        "sem título2.tmx": {
+            "scale": 3,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 215.33333333333337,
+                "y": 139.33333333333331
+            }
+        },
+        "sem título2.tmx#Dungeon_Tileset": {
+            "scaleInDock": 1
+        }
+    },
+    "last.imagePath": "D:/WS/tiles",
+    "map.height": 16,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 24,
+    "openFiles": [
+        "sem título2.tmx"
+    ],
+    "project": "jogo.tiled-project",
+    "recentFiles": [
+        "D:/WS/CG/zelda-Like/Assets/SuperTiled2Unity/sem título2.tmx",
+        "sem título.tmx",
+        "sem título2.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.type": 0
+}
