@@ -11,8 +11,8 @@ public class DamageDealer : MonoBehaviour
     {
         if (collision.CompareTag("enemy"))
         {
-            objectHealthScript = collision.gameObject.GetComponent<Health>();
-            objectHealthScript.TakeDamage(damageStrength);
+            //objectHealthScript = collision.gameObject.GetComponent<Health>();
+            //objectHealthScript.TakeDamage(damageStrength);
         }
 
     }
