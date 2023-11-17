@@ -14,12 +14,13 @@ public class FlyMonster : Enemy
 
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        target = GameObject.FindWithTag("Player").transform;
         currentState = EnemyState.idle;
         anim = GetComponent<Animator>();
+        target = GameObject.FindWithTag("Player").transform;
+        base.Start();
 
     }
 
@@ -37,10 +38,14 @@ public class FlyMonster : Enemy
            transform.position) <= chaseRadius  
            && Vector3.Distance(target.position,transform.position) > attackRadius
            ) {
-            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            myRigidBody.MovePosition(temp);
-            changeAnim(temp - transform.position);
-            ChangeState(EnemyState.walk);
+            if (currentState == EnemyState.idle || currentState == EnemyState.walk
+                && currentState != EnemyState.stagger)
+            {
+                Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                myRigidBody.MovePosition(temp);
+                changeAnim(temp - transform.position);
+                ChangeState(EnemyState.walk);
+            }
 
 
         }
