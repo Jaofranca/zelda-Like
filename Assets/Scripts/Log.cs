@@ -13,7 +13,8 @@ public class Log : Enemy
     public Animator anim;
 
     // Start is called before the first frame update
-    void Start()
+
+    protected override void Start()
     {
         currentState = EnemyState.idle;
         myRigidBody = GetComponent<Rigidbody2D>(); 
