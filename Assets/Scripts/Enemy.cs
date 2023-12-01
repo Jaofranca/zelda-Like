@@ -42,8 +42,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(knockTime);
             myRigidBody.velocity = Vector2.zero;
             currentState = EnemyState.idle;
-            myRigidBody.velocity = Vector2.zero;
-
+            
         }
     }
 

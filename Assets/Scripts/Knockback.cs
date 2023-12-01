@@ -10,44 +10,55 @@ public class Knockback : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("breakable") && this.gameObject.CompareTag("Player"))
-        {
-            other.GetComponent<pot>().Smash();
+        if(other.gameObject.CompareTag("enemy") && other.isTrigger) {
+            print("this.gameObject.transform.parent.gameObject");
+            other.GetComponent<KnockbackFeedback>().PlayFeedback(this.gameObject.transform.parent.gameObject);
         }
-        if ((other.gameObject.CompareTag("enemy") || other.gameObject.CompareTag("Player")) && other.isTrigger)
+        if(other.gameObject.CompareTag("Player") && other.isTrigger)
         {
-            
-            Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
-            
-            if(hit != null)
-            {
-                Vector2 difference = hit.transform.position - transform.position;
-               
-                difference = difference.normalized * thrust;
-                print(difference);
-                hit.AddForce(difference, ForceMode2D.Impulse);
-                if (other.gameObject.CompareTag("enemy") && !(this.GetComponent<Enemy>() != null))
-                {
-                    hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
-                    other.GetComponent<Enemy>().Knock(hit, knockTime,damage);
-                }
-                if (other.gameObject.CompareTag("Player"))
-                {
-                    if(other.GetComponent<Player>().currentState!= PlayerState.stagger)
-                    {
-                        this.GetComponent<Enemy>().currentState = EnemyState.stagger;
-                        this.GetComponent<Enemy>().Knock(hit, knockTime, damage);
-                        hit.GetComponent<Player>().currentState = PlayerState.stagger;
-                        other.GetComponent<Player>().Knock(knockTime, damage);
-                    }
-                   
-                  
-                }
-                
-            
-            }
+            other.GetComponent<KnockbackFeedback>().PlayFeedback(this.gameObject);
         }
-    }
+        
+        
+       
+        //if (other.gameObject.CompareTag("breakable") && this.gameObject.CompareTag("Player"))
+        //{
+        //    other.GetComponent<pot>().Smash();
+        //}
+        //if ((other.gameObject.CompareTag("enemy") || other.gameObject.CompareTag("Player")) && other.isTrigger)
+        //{
 
-    
+        //    Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
+
+        //    if (hit != null)
+        //    {
+        //        Vector2 direction = (transform.position - transform.position).normalized;
+        //        //hit.AddForce(difference, ForceMode2D.Impulse);
+        //        if (other.gameObject.CompareTag("enemy") && !(this.GetComponent<Enemy>() != null))
+        //        {
+        //            hit.AddForce(direction * thrust, ForceMode2D.Impulse);
+        //            hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
+        //            other.GetComponent<Enemy>().Knock(hit, knockTime, damage);
+        //        }
+        //        if (other.gameObject.CompareTag("Player"))
+        //        {
+        //            if (other.GetComponent<Player>().currentState != PlayerState.stagger)
+        //            {
+        //                hit.AddForce(direction * thrust, ForceMode2D.Impulse);
+        //                this.GetComponent<Enemy>().currentState = EnemyState.stagger;
+        //                this.GetComponent<Enemy>().Knock(hit, knockTime, damage);
+        //                hit.GetComponent<Player>().currentState = PlayerState.stagger;
+        //                other.GetComponent<Player>().Knock(knockTime, damage);
+        //            }
+
+
+        //        }
+
+
+        //    }
+
+
+        //    }
+        //} 
+    }
 }

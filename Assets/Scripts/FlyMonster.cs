@@ -11,6 +11,7 @@ public class FlyMonster : Enemy
     public Transform homePosition;
     private Rigidbody2D myRigidBody;
     public Animator anim;
+    public bool moving;
 
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class FlyMonster : Enemy
            && Vector3.Distance(target.position,transform.position) > attackRadius
            ) {
             if (currentState == EnemyState.idle || currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+                && currentState != EnemyState.stagger )
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
                 myRigidBody.MovePosition(temp);

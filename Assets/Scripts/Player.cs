@@ -90,9 +90,7 @@ public class Player : MonoBehaviour
     public void Knock(float knockTime,float damage)
     {
         playerHealth.initialValue -= damage;
-        
-        print("chegou?");
-        
+       
         
         if (playerHealth.initialValue > 0)
         {
@@ -106,13 +104,10 @@ public class Player : MonoBehaviour
     {
         if (myRigidBody != null)
         {
-            print("chegou!!");
             yield return new WaitForSeconds(knockTime);
             myRigidBody.velocity = Vector2.zero;
             currentState = PlayerState.idle;
-            myRigidBody.velocity = Vector2.zero;
-
-
+         
         }
     }
 }
