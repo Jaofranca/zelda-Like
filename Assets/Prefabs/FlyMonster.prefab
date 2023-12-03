@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 4229702137425752645}
   - component: {fileID: 7315758859470656246}
   - component: {fileID: 3290571446961463500}
-  - component: {fileID: 8968013257507008600}
   - component: {fileID: 4413387198515648778}
+  - component: {fileID: 6266126443509715243}
   m_Layer: 0
   m_Name: FlyMonster
   m_TagString: enemy
@@ -207,7 +207,6 @@ MonoBehaviour:
   attackRadius: 1
   homePosition: {fileID: 0}
   anim: {fileID: 0}
-  moving: 0
 --- !u!61 &3290571446961463500
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -253,27 +252,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28096443, y: 0.29861307}
   m_EdgeRadius: 0
---- !u!114 &8968013257507008600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2496892213204035550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfca2716346d4804a91239ef7ab33be1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb2d: {fileID: 4960964541356752343}
-  strength: 10
-  delay: 0.15
-  OnBegin:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDone:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4413387198515648778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +264,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3273ab8c68490634fb204dce512c290f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0
-  knockTime: 0
+  thrust: 4
+  knockTime: 0.15
   damage: 0
+--- !u!114 &6266126443509715243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496892213204035550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfca2716346d4804a91239ef7ab33be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 4960964541356752343}
+  strength: 5
+  delay: 0.15
+  damage: 5
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDone:
+    m_PersistentCalls:
+      m_Calls: []

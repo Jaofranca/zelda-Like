@@ -11,7 +11,6 @@ public class FlyMonster : Enemy
     public Transform homePosition;
     private Rigidbody2D myRigidBody;
     public Animator anim;
-    public bool moving;
 
 
     // Start is called before the first frame update
