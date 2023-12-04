@@ -13,8 +13,8 @@ public class Knockback : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("enemy") && other.isTrigger) {
-            print("this.gameObject.transform.parent.gameObject");
+        if (!this.gameObject.CompareTag("enemy") && other.gameObject.CompareTag("enemy") && other.isTrigger ) {
+            
             other.GetComponent<KnockbackFeedback>().PlayFeedback(this.gameObject.transform.parent.gameObject);
         }
         if(other.gameObject.CompareTag("Player") && other.isTrigger)

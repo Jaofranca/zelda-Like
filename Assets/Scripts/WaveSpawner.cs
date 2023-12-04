@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 [System.Serializable]
 public class EnemyPrefab
 {
@@ -19,6 +18,7 @@ public class WaveSpawner : MonoBehaviour
     private int waveValue;
     public List<GameObject> enemiesToSpawn = new List<GameObject>();
     
+    [SerializeField]
     public List<EnemyPrefab> enemies = new List<EnemyPrefab>();
 
     public Transform[] spawnLocation;
@@ -41,10 +41,11 @@ public class WaveSpawner : MonoBehaviour
     {
         if (spawnTimer <= 0)
         {
+            //spawn an enemy
             if (enemiesToSpawn.Count > 0)
             {
                 GameObject enemy = (GameObject)Instantiate(enemiesToSpawn[0], spawnLocation[spawnIndex].position, Quaternion.identity); // spawn first enemy in our list
-                enemiesToSpawn.RemoveAt(0); 
+                enemiesToSpawn.RemoveAt(0); // and remove it
                 spawnedEnemies.Add(enemy);
                 spawnTimer = spawnInterval;
 

@@ -25,10 +25,10 @@ public class KnockbackFeedback : MonoBehaviour
     public void PlayFeedback(GameObject sender)
     {
         enemygameObject = sender;
-        
         enemyStrength= sender.GetComponent<KnockbackFeedback>().strength;
         enemyDelay = sender.GetComponent<KnockbackFeedback>().delay;
         enemyDamage = sender.GetComponent<KnockbackFeedback>().damage;
+
 
         if (this.gameObject.CompareTag("enemy"))
         {

@@ -12,7 +12,6 @@ public class FlyMonster : Enemy
     private Rigidbody2D myRigidBody;
     public Animator anim;
 
-
     // Start is called before the first frame update
     protected override void Start()
     {

@@ -90,12 +90,16 @@ public class Player : MonoBehaviour
     public void Knock(float knockTime,float damage)
     {
         playerHealth.initialValue -= damage;
-       
+        PlayerHealthSignal.Raise();
+       print(playerHealth.initialValue);
         
         if (playerHealth.initialValue > 0)
         {
             PlayerHealthSignal.Raise();
             StartCoroutine(KnockCo(knockTime));
+        }
+        else{
+        this.gameObject.SetActive(false);
         }
         
     }

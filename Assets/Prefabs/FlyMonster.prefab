@@ -280,9 +280,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 4960964541356752343}
-  strength: 5
+  strength: 9
   delay: 0.15
-  damage: 5
+  damage: 1
   OnBegin:
     m_PersistentCalls:
       m_Calls: []
