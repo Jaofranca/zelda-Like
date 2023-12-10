@@ -202,6 +202,7 @@ MonoBehaviour:
   enemyName: Fly man
   baseAttack: 0
   moveSpeed: 2
+  enemyCounterSignal: {fileID: 11400000, guid: 6bdcfc413a9090249b0a0b6d8d7735a4, type: 2}
   target: {fileID: 0}
   chaseRadius: 4
   attackRadius: 1

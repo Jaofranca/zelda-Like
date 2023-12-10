@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe0704a12046de44daaa64e1ea08c1d9, type: 3}
-  m_Name: PlayerHeath
+  m_Name: DeadEnemies
   m_EditorClassIdentifier: 
-  initialValue: 6
-  RuntimeValue: 6
+  initialValue: 0
+  RuntimeValue: 10

@@ -17,7 +17,8 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
-   
+    public SignalSender enemyCounterSignal;
+
     protected virtual void Start()
     {
         health = maxHealth.initialValue;
@@ -27,7 +28,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
-
+            enemyCounterSignal.Raise();
             this.gameObject.SetActive(false);
         }
     }
